@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page // ama class </title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@600&display=swap'); 
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+:root{
+--primary-text-color: black;
+--secondary-text-color: #3c3d3c;
+}
+body{
+font-family: 'Poppins', sans-serif;
+font-color: black;
+}
+h1{
+font-size: 3rem;
+}
+h2{
+font-size: 2rem;
+}
+p{
+font-family: 'Roboto', sans-serif;
+font-size: 1.25rem;
+}
+a{
+text-decoration:none;
+display: inline-block;
+}
+.topbanner{
+/*margin: auto;*/
+height: 2.7rem;
+text-align: center;
+padding: 0.6rem;
+/*background-image: url('/storage/emulated/0/Ama Class website/top banner image.png');*/
+background-color: #f2c41b;
+background-size: 300px;
+color: white;
+}
+nav{
+padding: 8px;
+position: sticky;
+top:0px;
+background-color:white;
+height: 70px;
+box-shadow:0px 1px 3px #595958;
+}
+.logo{
+float: left;
+padding:2px;
+width: 130px;
+margin: auto;
+}
+li{
+float: right;
+list-style: none;
+padding: 10px;
+} a{ text-decoration: none; color: black;} 
+.btn {
+  background-color: rgb(255, 204, 0); /* Blue background */
+  border: none; 
+  border-radius: 3px;
+  color:white ; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+.icontext{
+padding:2px;
+font-size: 7px;
+text-align: center;
+}
+.container{
+margin: 100px 1px;
+display:flex;
+justify-content:center;
+justify-content:space-evenly;
+align-items:center;
+margin-top:20px;
+
+}
+div{
+height:100%;
+width:100%;}
+header{
+padding:8px;
+}
+.image{
+align-self:center;
+/*justify-items:center;*/}
+.aboutpara{
+align-self:center;
+padding: 10px;
+/*justify-items:center;*/}
+@media(max-width:480px){
+.frontlogo{
+width: 200px;
+} h2{ font-size:21px;} .m_para{ font-size:12px;}
+}
+/*Example Section contains 3 boxes*/
+.example{
+height:300px;
+padding:2px;
+display: flex;
+justify-content:space-evenly;
+align-items:center;
+background:0px url('/storage/emulated/0/Ama Class website/Picsart_22-12-25_21-09-19-673.jpg');
+}
+.box{
+border-radius: 10px;
+min-height: 90%;
+width:30%;
+display:flex;
+background-color:rgba(0, 0, 0, 0.4);
+box-shadow:2px 2px 4px rgba(255, 255, 102, 0.5);
+}
+.box span img{
+border:none;
+border-radius:10px;}
+h4{
+position:relative;
+left: 6px;
+font-size:12px;
+color: rgb(255, 255,255);}
+.bt{
+background-color:rgb(255, 204, 0);
+border:none;
+border-radius:3px;
+color:black ; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 12px; /* Set a font size */
+  cursor: pointer; 
+  margin:auto;
+  display:flex;
+  position:relative;
+  top:40px;
+  box-shadow:0px 0px 4px rgba(255, 255, 255, 0.3);
+}
+
+.section2{border:none;
+border-radius:15px;
+height:250px;
+background-color:#ffef5e;
+margin: 100px 1px;
+display:flex;
+justify-content:center;
+justify-content:space-evenly;
+align-items:center;
+margin-top:100px;
+box-shadow:0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.s2div2{ 
+position:absolute;
+right:10px;
+padding:6px;
+}
+.poster{
+border:none;
+border-radius:15px;
+}
+.s2text{
+padding:8px;
+font-size:18px;
+}
+.s2btn{
+background-color:#852cde;
+border:none;
+border-radius:4px;
+color:white; /* White text */
+  padding: 2px 6px; /* Some padding */
+  font-size: 12px; 
+  font-weight:bold;
+  cursor: pointer; 
+  margin:auto;
+  display:flex;
+  position:relative;
+  top:2px;
+  left:25px;
+  
+  box-shadow:0px 0px 4px rgba(255, 255, 255, 0.3);
+}
+
+.section3{
+height:258px;
+box-shadow:0px 0px 4px rgba(0, 0, 0, 0.2);
+margin: 100px 1px;
+display:flex;
+justify-content:center;
+justify-content:space-evenly;
+align-items:center;
+margin-top:100px;
+}
+.s3div1{background-color:#ffef5e;
+}
+.s3div1 pre{ position: relative;
+top:6px;
+left: 30px;
+font-family: 'Roboto', sans-serif;
+font-size:25px; font-weight:bold;
+}
+
+footer{
+background-color:rgba(224, 224, 222, 0.2);
+height:150px;
+display:flex;
+}
+.fdiv1{display:flex;
+width:50%;
+justify-items:center;
+align-items:center;
+}
+.fdiv1 img{
+position:relative;
+left:100%;}
+.fdiv1 h3{
+position:relative;
+left:10%;}
+.fdiv1 p{
+text-align:center;
+font-size:10px;}
+.fdiv2{
+display:flex;
+flex-direction:column;
+}
+.fdiv2 h4{display:flex;
+align-items:center;
+justify-content:center;
+color:black;
+font-family:'roboto';
+margin:4px ;}
+.icons{display:flex;
+justify-content:space-evenly;
+padding:20px;
+}
+.fdiv2 a{
+position:relative;
+left:10px;
+padding:2px;}
+.fdiv3{
+display:inline-block;
+text-align:center;}
+.subfooter{
+background-color:rgba(224, 224, 222, 0.2);
+height:30px;
+display:flex;
+justify-content:center;}
+
+.subfooter p{
+align-self:center;
+font-size:12px;}
+</style>
+</head>
+<body>
+<div class="topbanner">
+Keep Study Keep Happy :)
+</div>
+
+<nav class="navbar" >
+<img src="/storage/emulated/0/Ama Class website/20221224_213732.png"  class="logo">
+<ul clas="menue">
+<li><a href="#"><button class="btn"><i class="fa fa-book"></i></button></a><br><span class="icontext">Material</span></li>
+<li><a href="#"><button class="btn"><i class="fa fa-file"></i> </button></a><br><span class="icontext">Notes</span></li>
+<li><a href="#"><button class="btn"><i class="fa fa-home"></i></button></a><br><span class="icontext">Home</span></li>
+</ul>
+</nav>
+
+<header class="container">
+<div class="aboutpara">
+<h2>"A Simple Line"</h2>
+<p class="m_para"> We make study simple and easy to understand !!!</p>
+</div>
+<div class="image">
+<img src="/storage/emulated/0/Ama Class website/20221225_113405.png" width="300px" class="frontlogo">
+</div>
+</header>
+
+<section class="example">
+<a class="box" href="#" id="box1">
+<span><img src="/storage/emulated/0/Ama Class website/20221225_212525.jpg" width="100%" height="100px">
+<h4>New videos which uploded in Ama Class channel .</h4>
+<button class="bt">Click Here</button></span>
+</a>
+<a class="box" href="#" id="box2">
+<span><img src="/storage/emulated/0/Ama Class website/original.jpg" width="100%" height="100px">
+<h4 > New notes Of Class 12th Information Technology.</h4>
+<button class="bt">Click Here</button></span>
+</a>
+<a class="box" href="#" id="box3">
+<span><img src="/storage/emulated/0/Ama Class website/How-to-Create-an-Online-Course.png" width="100%" height="100px">
+<h4> New course which are comming soon in Ama Class.</h4>
+<button class="bt">Click Here</button></span>
+</a>
+ </section>
+ 
+<section class="section2">
+<div class="s2div1">
+<img src="/storage/emulated/0/Ama Class website/20221030_155330.jpg" class="poster" width="250px"></div>
+<div class=""s2div2><h2 class="s2text" >Odisha's Number 1 Codding Course Created By HARESH PANIGRAHI !</h2>
+<a href="#"><button class="s2btn">WATCH NOW</button></a> </div>
+</section>
+
+<section class="section3">
+<div class="s3div1">
+<pre>
+C
+O
+M
+M
+E
+N
+T
+S</pre>
+</div>
+<div class="s3div2">
+<img src="/storage/emulated/0/Ama Class website/Screenshot_2022_1226_105244.png" alt="comments" width="300px">
+<img src="/storage/emulated/0/Ama Class website/Screenshot_2022_1226_105325.png"  alt="comments" width="300px">
+<img src="/storage/emulated/0/Ama Class website/Screenshot_2022_1226_105351.png"  alt="comments" width="300px">
+<img src="/storage/emulated/0/Ama Class website/Screenshot_2022_1226_105522.png"  alt="comments" width="300px">
+</div>
+</section>
+
+<footer>
+<div class="fdiv1"><span><a href="#" >
+<img src="/storage/emulated/0/Ama Class website/20221224_204244.png" alt="channel logo" width="40px">
+</a>
+<h3> Ama Class</h3>
+<p>Join us Odisha's No.1 Codding Channel !</p></span>
+</div>
+<div class="fdiv2">
+<h4 class="1_heading"> Useful Links > </h4>
+<div class="icons">
+<a href="https://www.linkedin.com/in/haresh-panigrahi-825939242" target="blank" ><i class="fa-brands fa-linkedin"></i></a>
+<a href="https://youtube.com/@AmaClass" target="_blank" ><i class="fa-brands fa-youtube"></i></a>
+<a href="https://github.com/123techno" target="blank" ><i class="fa-brands fa-github"></i></a>
+<a href="https://facebook.com/groups/665683438592386/" target="blank" ><i class="fa-brands fa-facebook-f"></i></a>
+</div>
+<div class="fdiv3">
+<h4>Contact Us </h4> <a href="mailto:amaclass123@gmail.com" ><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div></footer>
+
+<div class="subfooter">
+<p>Copyright © 2022 Ama Class. All Rights Reserved</p>
+</div>
+
+<script src="https://kit.fontawesome.com/ea21979c31.js" crossorigin="anonymous"></script>
+</body>
+</html>
