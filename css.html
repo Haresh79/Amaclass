@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>css//tutorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Nunito&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<style>
+body{
+padding-right:10px;
+padding-left:10px;
+}
+font{
+color:red;
+font-size:18px;
+}
+.heading{
+text-align:center;
+font-size:80px;
+}
+h1{
+font-family:'Cabin', sans-serif;
+font-size:60px;
+}
+h2{
+font-family:'Cabin', sans-serif;
+font-size:50px;
+}
+h3{
+font-family:'Cabin', sans-serif;
+font-size:40px;
+}
+h4{
+font-family:'Cabin', sans-serif;
+font-size:30px;
+}
+p{
+font-family: 'Nunito', sans-serif;
+font-size:20px;
+}
+span{
+font-family: 'Nunito', sans-serif;
+font-size:20px;
+}
+textarea{
+background:#c2fcd2;
+height:130px; width:96%;
+border:none;
+border-radius:2px;
+padding:6px;
+}
+
+/* code editor css*/
+.editor{
+padding:10px;
+}
+#html-code{
+background:#c2fcd2;
+height:140px; width:100%;
+border:1px solid green;
+border-radius:4px;
+}
+#output{
+height:130px; width:100%;
+border:1px solid #5b34eb;
+border-radius:4px;
+}
+</style>
+</head>
+<body>
+ <h1 class="heading">CSS</h1>
+<p>
+	<ul>
+	<li>CSS stands for cascading style sheets.</li>
+	<li>CSS gives style to row HTML.</li>
+	<li>CSS is used to give style to our web pages.</li>
+	<li>CSS is used to make website responsive.</li>
+	<li>HTML is used to structure a website.</li>
+	<li>CSS takes responsibility for design.</li>
+	</ul>
+</p>
+<h2>SYNTAX OF CSS</h2>
+<textarea>
+<style>
+.para{
+	background:red;
+}
+</style>
+</textarea>
+<font>NOTE: .para is selector, {} declaration block, background: ; is property and
+red is value.</font>
+
+<h2>Adding CSS in to Your Page</h2>
+<p> There are 3 types of ways to add CSS to the mark up.
+<br>1) INLINE CSS : It is added to the elements directly using style attributes.
+<br>2) INTERNAL CSS : It is kept inside the head tag in <font>style</font> tag.
+<br>3) EXTERNAL CSS : It is kept separately inside a CSS stylesheet.
+</p>
+<textarea>
+<!--External CSS-->
+<head>
+ <link rel="stylesheet" href="name-file.css">
+</head>
+<!--Internal CSS-->
+<style>
+h1{
+	color:red;
+}
+</style>
+<!--Inline CSS-->
+<body>
+<h1 style="color:red">HELLO</h1> 
+</body>
+</textarea>
+<font>NOTE: In External CSS you have to made a
+external file with extantion .css , and write css code there.</font>
+
+<h2>Selectors In CSS</h2>
+<p>
+*CSS selectors are used to find the elements whose property will be set.
+<br>*Selectors are used to target the HTML elements.
+<br>*Selectors make it easy for us to easily target single/multiple HTML elements in the markup.
+</p>
+<textarea>
+p{
+      Color : red;
+   }
+/*CSS ID selectors*/
+#redelement{
+         Color : red;
+          }
+/*CSS class selectors*/
+               .redelement{
+               color : red;
+                   }
+/*CSS grouping selectors*/
+
+</textarea>
+<font>NOTE: Here Class is multiple but Id is unique.</font>
+
+<h2>Fonts In CSS</h2>
+<p>
+*<font>font-family</font> to set different font .
+<br>*<font>font-size</font> to set font size.
+<br>*<font>line-height</font> it separate a line from its  previous line.
+<br>*<font>font-weight</font> it use to set font weight like bold.
+<br>*<font>font-style</font>  it use to set a style of a font like italic.
+</p>
+<textarea>
+<style>
+   p{
+          font-family : ubliota;
+          font-size:333px;
+          line-heigh:8.3 cm;
+          font-weight:bold; 
+          font-style:itelic;
+  	}
+</style>
+<p> This is a paragraph .
+</p>
+</textarea>
+<font>NOTE: Apply it after making a 'p' tag.</font>
+
+<h2>Colors In CSS</h2>
+<p>
+*<font>blue</font> You can set it by Name.
+<br>*<font>rgb(0,0,255)</font> You can set it by RGB Value.
+<br>*<font>#0000ff</font> You can set it by Hexadecimal Value.
+</p>
+<textarea>
+<style>
+   #firstpara{
+           color:blue;
+           /*color:rgb(0,0,255);*/
+  		   /*color:#0000ff;*/
+  	}
+</style>
+<p id="firstpara">
+this is a paragraph about our website .
+first i learn HTML than i try to learn CSS.
+</p>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Borders And Backgrounds In CSS</h2>
+<p>
+* You can set <font>border width, style, color and radius</font>
+<br>* You can set <font>background-color, background-
+image, background-position</font> , etc.</p>
+<textarea>
+<style>
+   #firstpara{
+     	     background-color: white;
+     	     height:100px;
+     	     width:455px;
+     	     border:4px solid red;
+     	     border-radius:11px;
+     	     background-image:url(‘path/of/image.jpg’);
+     	     background-position:center center;
+     	     
+     }
+</style>
+<p id="firstpara">
+this is a paragraph about our website .
+first i learn HTML than i try to learn CSS.
+</p>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>CSS Box Model, Margin and Padding</h2>
+<p>
+The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of: margins, borders, padding, and the actual content.
+ The image below illustrates the box model:
+</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04u87qzzaoYnoWCOcBrvarmahZ1gZsG8lZA&usqp=CAU" 
+width="300px">
+<p>Content - The content of the box, where text and images appear
+<br>Padding - Clears an area around the content. The padding is transparent
+<br>Border - A border that goes around the padding and content
+<br>Margin - Clears an area outside the border. The margin is transparent
+</p>
+<textarea>
+<style>
+  div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  }
+  </style>
+  <h2>Demonstrating the Box Model</h2>
+  <p>The CSS box model is essentially a box that wraps around every HTML element. 
+  It consists of: borders, padding, margins, and the actual content.</p>
+  <div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+</style>
+<p id="firstpara">
+this is a paragraph about our website .
+first i learn HTML than i try to learn CSS.
+</p>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Float And Clear</h2>
+<p>
+The CSS <font>float</font> property specifies how an element should float.
+The CSS <font>clear</font> property specifies what elements can float beside the cleared element and on which side.</p>
+<p>
+The float property can have one of the following values:<font> left, right, none, inherit</font>
+<br>The clear property can have one of the following values:<font> left, right, none, inherit</font>
+<br><font>overflow</font> is also a css property you can use :<font> visible, hidden, auto, scroll</font></p>
+<textarea>
+<Style>
+Div{height:50px; width:50px; background: yellow; float:left;}
+P{overflow:auto;}
+</Style>
+
+<Div>
+</Div>
+<P>
+Hello friends for study science class html by haresh sir please sir at Alakh pm long question of your life and all of the keyboard is a parfect of your life and all the happiness and happiness in the future of the keyboard and you are very fast and all the 
+</P>
+</textarea>
+<textarea>
+<Style>
+Div{height:50px; width:50px; background: yellow; float:left;}
+P{overflow:auto; clear:left;}
+</Style>
+
+<Div>
+</Div>
+<P>
+Hello friends for study science class html by haresh sir please sir at Alakh pm long question of your life and all of the keyboard is a parfect of your life and all the happiness and happiness in the future of the keyboard and you are very fast and all the 
+</P>
+</textarea>
+
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Style Link and Button</h2>
+<p>
+Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+
+</p>
+<textarea>
+<style>
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+</style>
+<h2>Link Button</h2>
+<a href="#" target="_blank">This is a link</a>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+<h2>Style Link and Button</h2>
+<p>
+Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+
+</p>
+<textarea>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+<h2>CSS Display Property</h2>
+<p>
+The display property is the most important CSS property for controlling layout.<br>
+The default display value for most elements is <font>block</font> or <font>inline</font>.
+</p>
+<textarea>
+<style>
+header{ margin:auto;
+width:150px;
+}
+img{ margin:auto;
+display:block;
+}
+</style>
+<header>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="200px">
+    <h3>MY SITE</h3>
+</header>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>CSS Position</h2>
+<p>
+It specifies the position of your element.
+<br><font>Absolute:-</font> position the elements relative to the position of its first parent.
+<br><font>Relative:-</font> position the elements to its normal position and will leave a gap at its normal positon.
+<br><font>Fixed:-</font> position the elements relative to the browser window.
+<br><font>Sticky:-</font> position the elements to its normal position but when we scroll than it moves towards top & fixed .
+</p>
+<textarea>
+
+<style>
+div.relative {
+  position: relative;
+  width: 400px; height: 200px;
+  border: 3px solid #73AD21;} 
+div.absolute {
+  position: absolute;
+  top: 80px;  right: 0;
+  width: 200px; height: 100px;
+  border: 3px solid #73AD21;}
+.fixed{
+position:fixed; border:2px solid red;
+width:80px; height:50px; top:0px; right:0px;}
+.sticky{
+position:sticky; border:2px solid blue;
+height:20px; top:0px;
+}
+</style>
+<div class="sticky">this div element has position:sticky;</div>
+<div class="relative">This div element has position: relative;
+  <div class="absolute">This div element has position: absolute;</div>
+</div>
+<div class="fixed">this div element has position:fixed;</div>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>CSS Visibility</h2>
+<p>
+When we wants to hide the element but that will show its empty space than we use <font>visibility:hidden;</font>
+<br>If you wants to also remove the empty space than you can use <font>display:none;</font>
+</p>
+<textarea>
+<style>
+div{width:50px; height:50px; background:red;}
+#1{visibility:hidden;}
+#2{display:none;}
+</style>
+<div></div>
+<p> HEllo my name is haresh panigrahi . i have a youtube channell thats name is 
+amaclass . to day i share you css note through our website .
+please go and first watch the video than understand .</p>
+<div id="1"></div>
+<p> HEllo my name is haresh panigrahi . i have a youtube channell thats name is 
+amaclass . to day i share you css note through our website .
+please go and first watch the video than understand .</p>
+<div id="2"></div>
+<p> HEllo my name is haresh panigrahi . i have a youtube channell thats name is 
+amaclass . to day i share you css note through our website .
+please go and first watch the video than understand .</p>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Z-INDEX IN CSS</h2>
+<p>The z-index property specifies the stack order of an element.
+</p>
+<textarea>
+
+<style>
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+<h1>This is a heading</h1>
+<img src="https://cdn.pixabay.com/photo/2016/03/02/13/59/bird-1232416__340.png" width="190px">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+</textarea>
+<font>NOTE: Z-index only work for position: relative, absolute, fixed, sticky ; <br>Apply this in our Code Editor.</font>
+
+<h2>CSS FLEX-BOX</h2>
+<p>* Flexbox is a one-dimensional layout methode for laying out items in rows or columns.<br>
+* CSS flexbox is a better way to align items into a container.<br>
+* We can say <font>Flexbox = Flexible + Box</font> .
+</p>
+<textarea>
+
+<style>
+.flex-container {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items:flex-end;
+  
+  background-color:lightblue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+
+  align-self:center;  
+}
+</style>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>  
+</div>
+
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+<br>For more information you can go to <a href="https://www.w3schools.com/css/css3_flexbox_container.asp">Click Me</a> and follow the code.
+<h2>Responsive Design ( Media Queries )</h2>
+<p>* Endless new resolutions & devices are difficult to support separately for a Web Developer.
+<br>* Responsive design is a way for a web developer to make his wesite adapt to all the devices & resolution.
+<br>* Various way to get a responsive design.
+<br><font>1. Setting up the viewport.
+<br>2. Use max-width / max-height.
+<br>3. Using rem/vh/vw like units over px. </font>
+</p>
+<textarea>
+<style>
+body{
+	background:green;
+}
+@media(width<=400px){
+	body{
+		background:red;
+	}
+}
+</style>
+<h1>Hello Every One</h1>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Pseudo Selectors In CSS</h2>
+<p>When we wants t target a specific tag than we use <font>pseudo selectors</font> .
+There is various methodes avilable, go to bellow example.
+</p>
+<textarea>
+<style>
+a[target]{ color:red;}
+input[type="number"]{background:green;}
+p:first-child{ color:red;}
+li:nth-child(2){ color:yellow;}
+.p2::first-line{color:orange;}
+.p2::first-letter{color:blue;}
+</style>
+<a href="#">First Link</a>
+<a href="#" target="_blank">Second Link</a>
+<input type="text"><input type="number">
+<div>
+<p>This is 1st Paragraph.</p>
+<p class="p2">This is 2nd Paragraph.hohhihihih
+huhihihohohohoohohoiuijkhkhihihoihhihhihi
+hihiihkkhkhhihjio</p>
+</div>
+<ul>
+<li>1st Item</li>
+<li>2nd Item</li>
+</ul>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Box And Text Shadow</h2>
+<p>To give shadow in a block we use <font>box-shadow</font>. <br>
+To give shadow in any text we use <font>text-shadow</font>.
+</p>
+<textarea>
+<style>
+div{box-shadow:5px 5px 2px yellow; background:green;}
+h1{text-shadow:5px 5px 3px red;}
+</style>
+<div style="height:50px; width:50px;"></div>
+<h1>this is a div</h1>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>CSS Variables</h2>
+<p>When we wants to use a property many times than we create
+a specific variable for that and use that again and again.<br>
+This is more useful during aplication of <font>media queries</font>.
+</p>
+<textarea>
+<style>
+:root{--denger:red;}
+p{background-color:var(--denger);}
+h3{color:var(--denger);}
+</style>
+<p>this is a paragraph </p>
+<h3>this is a h3 heading</h3>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Animation With CSS</h2>
+<p>CSS allows animation of HTML elements without using JavaScript or Flash!
+<br>To use CSS animation, you must first specify some keyframes for the animation.
+Keyframes hold what styles the element will have at certain times.</p>
+<textarea>
+<style>
+div{height:30px; width:30px; background:black;
+position:relative; animation-name:divanim;
+animation-duration:1s; animation-iteration-count:5;}
+@keyframes divanim{
+ 0%{background:black;top:0px;}
+ 25%{background:yellow; top:0px; left:250px;}
+ 50%{background:red; top:50px; left:250px;}
+ 75%{background:green;top:50px;}
+}
+</style>
+<div></div>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Transition With CSS</h2>
+<p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+<textarea>
+<style>
+.d1{background:green; width:50; height:50; border-radius:0%;
+transition-property:background,border-radius; transition-duration:1.5s;}
+.d1:hover{background:red; border-radius:50%;}
+.d2{background:pink; width:50; height:50;
+transition:background,border-radius 1.5s ease-in 1s;}
+.d2:hover{background:violet; border-radius:50%;}
+</style>
+<div class="d1"></div>
+<div class="d2"></div>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Transform With CSS</h2>
+<p>CSS transforms allow you to move, rotate, scale, and skew elements.</p>
+<textarea>
+<style>
+div{height:20px; border:1px solid green; background:yellow;}
+.d2:hover{transform:rotate(45deg);}
+.d3:hover{transform:skew(30deg);}
+.d4:hover{transform:scale(2);}
+</style>
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3"></div>
+<div class="d4"></div>
+
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>CSS Grid </h2>
+<p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+<textarea>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid red;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>  
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>  
+</div>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+<br> For more information about CSS GRID you can go <a href="https://www.w3schools.com/css/css_grid.asp">Click Me</a> and follow the code.
+<!--Code Editor-->
+<br><br><br>
+<div class="editor">
+<lebel> CODE </lebel>
+<textarea id="html-code" onkeyup="run()">
+<html>
+<head>
+<title>amaclass</title>
+</head>
+<body>
+
+</body>
+</html>
+</textarea>
+<lebel> OUTPUT </lebel>
+<iframe id="output">
+</iframe>
+</div>
+<script type="text/javascript">
+function run(){
+	let htmlcode= document.getElementById("html-code").value;
+	let output= document.getElementById("output");
+	output.contentDocument.body.innerHTML=htmlcode;
+	output.contentWindow.eval(htmlcode);
+}
+</script>
+</body>
+</html>
