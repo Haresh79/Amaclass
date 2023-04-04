@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+textarea{ height:300px;}
+lebel{ background:#509663;width:100%; padding:2px; border-radius:2px;
+font-size:20px; font-weight:bold; letter-spacing:5px; color:white; margin-left:10px;}
+.input{display:grid; grid-template-columns:1fr 1fr 1fr;
+padding:4px; column-gap:4px;}
+#terminal{
+	height:200px; width:100%; border-radius:4px;
+	border:2px solid red; margin-top:4px;
+}
+textarea{
+    border:3px solid #03bafc;
+    background:#282929;
+    color:white;
+}
+textarea:hover{
+    border:5px solid #11ab6d;
+    transform:scale(1.012);
+}
+.l2{
+    background:#509663;width:100%; padding:2px; border-radius:2px; 
+    font-size:20px; font-weight:bold; letter-spacing:5px; color:white; margin-left:10px;
+}
+</style>
+</head>
+<body>
+<div class="head"><lebel>HTML + CSS + JS</lebel></div>
+<div class="input">
+<textarea id="html" onkeyup="run()"></textarea>
+<textarea id="css" onkeyup="run()"></textarea>
+<textarea id="js" onkeyup="run()"></textarea>
+</div>
+<div>
+<label class="l2">OUTPUT</label>
+<iframe id="terminal"></iframe>
+</div>
+<script>
+function run(){
+	let htmlcode=document.getElementById('html').value;
+	let csscode=document.getElementById('css').value;
+	let jscode=document.getElementById('js').value;
+	let terminal= document.getElementById('terminal');
+
+	terminal.contentDocument.body.innerHTML= htmlcode+"<style>"+csscode+"</style>";
+	terminal.contentWindow.eval(jscode);
+}
+</script>
+</body>
+</html>
