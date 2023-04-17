@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Nunito&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+<style>
+style{
+	background-color:#c2fcd2;
+	font-size:30px;
+}
+body{
+padding:15px;}
+.output{
+border:2px solid #5a15e6;
+padding: 4px;
+}
+font{
+color:red;
+font-size:18px;
+}
+.heading{
+text-align:center;
+font-size:130px;
+}
+h1{
+font-family:'Cabin', sans-serif;
+font-size:130px;
+}
+h2{
+font-family:'Cabin', sans-serif;
+font-size:100px;
+}
+h3{
+font-family:'Cabin', sans-serif;
+font-size:50px;
+}
+h4{
+font-family:'Cabin', sans-serif;
+font-size:30px;
+}
+p{
+font-family: 'Nunito', sans-serif;
+font-size:20px;
+}
+span{
+font-family: 'Nunito', sans-serif;
+font-size:20px;
+}
+.a{
+font-family: 'Nunito', sans-serif;
+font-size:20px;
+}
+textarea{
+background:#c2fcd2;
+height:500px; width:96%;
+border:none;
+border-radius:2px;
+padding:6px;
+}
+/* code editor css*/
+.input{display:grid; grid-template-columns:1fr 1fr;
+column-gap:10px; 
+padding:4px;}
+#terminal{
+	height:200px; width:100%;
+	border:1px solid red; background:;
+}
+#html{border:1px solid green; height:300px;}
+#js{border:1px solid green; height:300px;}
+</style>
+</head>
+<body>
+<h1 class="heading">JavaScript</h1>
+  <ul class="a">
+  <li>JavaScript is a client side scriptng language.</li>
+  <li>It is used to make web pages alive.</li>
+  <li>It is used to programmaticaly perform action within the page.</li>
+  <li>When JS was created it was initialy called"Live Script".</li>
+  <li>In that time Java was very popular language thats why JS was treated as "Younger Brother" of java. </li>
+  <br>
+  <li>JS can execute not only in the browser, but also on the server.</li>
+  <li>We will use JavaScript as both client and server side language.</li>
+  <li>JS has evolved greatly as a language and now we use it to perform variety of tasks.</li>
+  <li>JS is maintained by community version of JS is "ECMA"</li>
+  </ul>
+ <h2> How To Write JS Code </h2>
+ <p>We can write JS code in HTML Document at the end of "body" tag by 
+ using a tag or element "script". as shown bellow.</p>
+  <style  style="display:block; 
+  white-space:pre;">
+  <html>
+      	<head>
+      		<title> ama class </title>
+      	</head>
+      	
+      	<body>
+      	  HELLO WORLD ! :)
+      	  <script>
+      	     //JavaScript Code
+      	  <script>
+      	</body>
+  </html>
+  </style>
+<h2>How to use JavaScript in code</h2>
+<p> You can use link your JS file by using <font>script</font> tag and <font>src="myscript.js"</font> .
+</p>
+<style  style="display:block; 
+  white-space:pre;">
+  <html>
+      	<head>
+      		<title> ama class </title>
+      	</head>
+      	
+      	<body>
+      	  HELLO WORLD ! :)
+      	  <script src="myscript">
+      	     //JavaScript Code
+      	  <script>
+      	</body>
+  </html>
+  </style>
+
+<h2>Variables</h2>
+<p>It is the name of the memory location where we store any data.
+<br> We can simply make variable by using <font>var</font> and <font>let</font> keyword .</p>
+<textarea>
+	var a
+	a=10
+	let b="haresh"
+</textarea>
+<span>Here a is a integer variable and b is a sting variable.just like you can make any type of variable.
+<br>A JavaScript name must begin with:
+A letter (A-Z or a-z)
+A dollar sign ($)
+Or an underscore (_)
+Subsequent characters may be letters, digits, underscores, or dollar signs.</span>
+<br><font>NOTE: "var" can use to redeclaring a variable. but "let" can not allow that.
+<br> Apply this in our Code Editor.</font>
+
+<h2>Comments in JS</h2>
+<p>JavaScript comments can be used to explain JavaScript code, and to make it <font>more readable</font>.
+<br>This comment lines are <font>not executable</font> by browser.<br>
+This comments are two types <font>(i)Single-line</font> and <font>(ii) Multi-line</font> comments.</p>
+<textarea>
+//this is a single line comment
+	/*var a 
+	 a=10*/
+	 //this is a multi line comment.
+	let b="haresh"
+</textarea>
+<span>Here a is a integer variable and b is a sting variable.just like you can make any type of variable.</span>
+<br><font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>const in JS</h2>
+<p>The const keyword was introduced in ES6 (2015).
+<br>Variables defined with const cannot be Redeclared.
+<br>Variables defined with const cannot be Reassigned.</p>
+<textarea>
+ const pi=3.141;
+ 
+ pi=3;
+ 
+ //it through an error.
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Operators in JS</h2>
+<p>Operators are the symbles which performs a specific operation with one or more operands.<br>
+operands are these values which are use to performs operations.
+<br>Operators are two types <font>Unary </font> and <font>Binary</font></p>
+<span>In javascript support varius operators which given bellow.</span>
+<h4>Assignment Operators</h4>
+<textarea>
+var x;
+var y;
+
+//normal assignment operators
+x=4;
+y=2
+//compound assignment operators
+x += y	//x = x + y
+x -= y	//x = x - y
+x *= y	//x = x * y
+x /= y	//x = x / y
+x %= y	//x = x % y
+x **= y	//x = x ** y
+</textarea>
+<h4>Arithmetic Operators</h4>
+<textarea>
+var x=4;
+var y=2;
+var s;
+
+s=x+y	//Addition
+s=x-y	//Subtraction
+s=x*y	//Multiplication
+s=x**y	//Exponentiation (ES2016)
+s=x/y	//Division
+s=x%y	//Modulus (Division Remainder)
+s=y++	//Increment
+s=x--	//Decrement
+</textarea>
+<h4>Comparison Operators</h4>
+<textarea>
+var x=4;
+var y=2;
+
+x==y	//equal to
+x===y	//equal value and equal type
+x!=y	//not equal
+x!==y	//not equal value or not equal type
+x>y	//greater than
+x<y   //less than
+x>=y	//greater than or equal to
+x<=y	//less than or equal to
+?	//ternary operator now we skip it
+</textarea>
+<h4>Logical Operators</h4>
+<textarea>
+var x=true;
+var y=false;
+
+x&&y	//logical and
+x||y	//logical or
+!y	    //logical not
+</textarea>
+<span>For more information go to here <a href="https://www.w3schools.com/js/js_operators.asp" target="_blanck" >Click Me</a>.<br></span>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Data Types in JS</h2>
+<p>JavaScript has 8 Datatypes<br>
+1. String<br>
+2. Number<br>
+3. Bigint<br>
+4. Boolean<br>
+5. Undefined<br>
+6. Null<br>
+7. Symbol<br>
+8. Object<br>
+<br>
+The Object Datatype<br>
+The object data type can contain:<br>
+<br>
+1. An object<br>
+2. An array<br>
+3. A date<br>
+</p>
+<h2>How to print In Terminal</h2>
+<p>To print any thing in terminal you can just use <font>console.log("Hello Every One");</font>
+then go to inspect element in your browser and open console and see the output.
+</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1S0uiOBCyRLp_pIs_bbnPwTqdEX-a9mC5g&usqp=CAU" 
+style="border:2px solid red;"   width="700px">
+<h2>Strings in JS</h2>
+<p>A string is a series of characters which use to represent a value.</p>
+<textarea>
+var string ="this";
+var name="Haresh";
+var massage="Haresh is a good coder";
+var tmp1= string+" "+name;
+var tmp2=`${string} is ${name} and ${massage}.`;
+var length=string.length;
+var tmp3= "hello \n every one \t wellcome to \\ ama class\?"
+</textarea>
+<span>For more information go to here <a href="https://www.w3schools.com/js/js_strings.asp" target="_blanck" >Click Me</a>.<br></span>
+<font>NOTE: Apply this in our Code Editor. Do not create Strings objects.
+The new keyword complicates the code and slows down execution speed.
+String objects can produce unexpected results:</font>
+
+<h2>String Functions</h2>
+<p>String length: to find the length of any string.<br>
+String slice(): extracts a part of a string and returns the extracted part in a new string.<br>
+String substring(): The difference is that start and end values less than 0 are treated as 0 .<br>
+String substr(): substr() is similar to slice().<br>
+The difference is that the second parameter specifies the length of the extracted part.<br>
+String replace(): The replace() method replaces a specified value with another value in a string.<br>
+String toUpperCase(): string is converted to upper case .<br>
+String toLowerCase(): string is converted to lower case with.<br>
+String concat(): joins two or more strings.<br>
+String trim(): it removes whitespace from both sides of a string.<br>
+String charAt(): method returns the character at a specified index (position) in a string.<br>
+String split(): A string can be converted to an array with the split() method.</p>
+<textarea>
+var str1="Ezee";
+var op1=str1.length
+
+let text = "Apple, Banana, Kiwi";
+let op2 = text.slice(7, 13);
+
+let str2 = "Apple, Banana, Kiwi";
+let op3 = str2.substring(7, 13);
+
+let str3 = "Apple, Banana, Kiwi";
+let op4 = str3.substr(7, 6);
+
+let text1 = "Please visit Microsoft!";
+let op5 = text1.replace("Microsoft", "W3Schools");
+
+let text2 = "Hello World!";
+let op6 = text2.toUpperCase();
+
+let text3 = "Hello World!"; 
+let op7 = text3.toLowerCase();  
+
+let texta = "Hello";
+let textb = "World";
+let op8 = texta.concat(" ", textb);
+
+let text4 = "      Hello World!      ";
+let op9 = text4.trim();
+let op10= text4.trimStart();
+let op11= text5.trimEnd();
+
+let text = "a,b,c,d,e,f";
+const myArray = text.split(",");
+</textarea>
+<span>For more information go to here <a href="https://www.w3schools.com/js/js_string_methods.asp" target="_blanck" >Click Me</a>.<br></span>
+<font>NOTE: Apply this in our Code Editor.
+String search methods are covered in the next chapter.</font>
+
+<h2>Conditional Statements</h2>
+<p>Conditional statements are used to perform different actions based on different conditions.<br><br>
+Use <font>if</font> to specify a block of code to be executed, if a specified condition is true.<br>
+Use <font>else</font> to specify a block of code to be executed, if the same condition is false.<br>
+Use <font>else if</font> to specify a new condition to test, if the first condition is false.<br>
+Use <font>switch</font> to specify many alternative blocks of code to be executed</p>
+<textarea>
+//if - else
+let hour = new Date().getHours();
+if(hour>=12){
+ alert("good night")
+}
+else{
+ alert("good morning")
+}
+
+//else - if leader
+let time=3;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+//switch statement
+let day = new Date().getDay()
+switch(day){
+case 0:alert("Sun Day");
+case 1:alert("Mon Day");
+case 2:alert("Tues Day");
+case 3:alert("Wedness Day");
+case 4:alert("Thrus Day");
+case 5:alert("Fri Day");
+case 6:alert("Satur Day");
+}
+</textarea>
+<font>NOTE: Apply this in our Code Editor.Must use break statement .</font>
+
+<h2>Arrays</h2>
+<p>A Array is a list or collection of some Data Items.
+<br> You can assign an array in different types, for more information you can click the note section 
+link <font>click me</font></p>
+<textarea>
+//first way 
+const arr1=["haresh",15,08];
+
+//second way
+const arr2=[];
+arr2[0]="haresh";
+arr2[1]=15;
+arr2[2]=08;
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Objects</h2>
+<p>An Object is a type of array which use to store multiple type of data items with 
+a access key.</p>
+<textarea>
+//object
+const marks={
+sub1:92;
+sub2:95;
+sub3:83;
+};
+
+//array as object
+const marks2 = new Array(91,87,65);
+</textarea>
+<span>For more information you can go to a page <a href="https://www.w3schools.com/js/js_object_definition.asp">Click Me</a></span><br>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Functions</h2>
+<p>A JavaScript function is a block of code designed to perform a particular task.<br>
+A JavaScript function is executed when "something" invokes it (calls it).</p>
+<textarea>
+let x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+  return a * b;             // Function returns the product of a and b
+}
+
+//a simple function to convert degf to degc...
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+</textarea>
+<span>For more information you can go to a page <a href="https://www.w3schools.com/js/js_function_definition.asp">Click Me</a></span><br>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Alert, Prompt, Confirm</h2>
+<p>o Due to Alert in browser Javascript through a pop-up message.<br>
+o Due to Prompt you can take user input through browser.<br>
+o Confirm is use to take user confirmation through browser.</p>
+<textarea>
+alert("This is a Data alert 90% used");
+
+let name = prompt("What is your ID");
+
+const deletepost = confirm("Do you want to Delete your post");
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Loops</h2>
+<p>Loops are handy, if you want to run the same code over and over again, each time with a different value.<br>
+There is different kind of loops are avilable, like <font>for</font>, <font>while</font> and <font>do-while</font>.</p>
+<textarea>
+let text = "";
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+let text1="";
+let i=0;
+while(i<4){
+text1 +=i+"<br>";
+}
+
+let text2="";
+let i=0;
+do{
+text2 += i+"<br>";
+}while(i<4);
+</textarea>
+<span>For more information you can go to a page <a href="https://www.w3schools.com/js/js_loop_for.asp">Click Me</a></span><br>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>D O M</h2>
+<p>When a web page is loaded, the browser creates a <b>D</b>ocument <b>O</b>bject <b>M</b>odel of the page.
+<br>The <b>HTML DOM</b> model is constructed as a tree of <b>Objects</b>:</p>
+<img src="https://www.w3schools.com/js/pic_htmltree.gif" width="700px" style="border:2px solid red;" >
+<textarea>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+</textarea>
+<span>For more information you can go to a page <a href="https://www.w3schools.com/js/js_htmldom_document.asp">Click Me</a></span><br>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Events</h2>
+<p>When an action is happened than the block of code is run.</p>
+<textarea><!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click "Try it" to execute the displayDate() function.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html> 
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>SetTimeout, ClearTimeout, SetInterval</h2>
+<p>
+<b>SetTimeout()</b> : It runs a function after an interval of time.
+<br><b>ClearTimeout()</b> : It stops the function after an interval of time.
+<br><b>SetInterval()</b> : It allows us to run a function repeatedly after every interval of time.</p>
+<textarea>
+let str ="";
+function fcn1(){
+  str="hello every one "
+}
+setTimeout(fcn1,5000) // time in ms
+clearTimeout(fcn1,6000)
+
+// set interval
+<html>
+<body>
+<p id="demo"></p>
+</body>
+</html> 
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+setInterval(displayDate, 1000)
+</script>
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<h2>Arrow Function</h2>
+<p>It is a short cut to call a function in Java Script.</p>
+<textarea>
+let a=5;
+let b=6;
+let sen;
+//arrow function to add a and b 
+let add=(a,b)=>a+b;
+let sub=(a,b)=>a-b;
+let mul=(a,b)=>a*b;
+let div=(a,b)=>a/b;
+
+const msg=()=>{
+   sen="Enjoy Calculator"
+}
+msg()
+</textarea>
+<font>NOTE: Apply this in our Code Editor.</font>
+
+<!--Code Editor-->
+<br><br><br>
+<div class="editor">
+<lebel> CODE </lebel>
+<div class="input">
+<textarea id="html" onkeyup="run()">
+<html>
+<head>
+</head>
+<body>
+<div id="demo">
+</body>
+</html>
+</textarea>
+<textarea id="js" onkeyup="run()">
+
+
+document.getElementById("demo").innerHTML = 
+</textarea>
+</div>
+<lebel>OUTPUT</lebel>
+<iframe id="terminal" ></iframe>
+<script>
+function run(){
+	let htmlcode=document.getElementById('html').value;
+	let jscode=document.getElementById('js').value;
+	let terminal= document.getElementById('terminal');
+
+	terminal.contentDocument.body.innerHTML= htmlcode;
+	terminal.contentWindow.eval(jscode);
+}
+</script>
+</body>
+</html>
