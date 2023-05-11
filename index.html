@@ -36,16 +36,30 @@ a{
 text-decoration:none;
 display: inline-block;
 }
-
 nav{
-padding: 8px;
+
 position: sticky;
+
 top:0px; color:black;
+
 background-color:#8fd0ff;
-height: 90px; width:100%;
-box-shadow:0px 1px 3px #595958;
+
+height: 50px; width:100%;
+
 z-index:999;
+
 }
+
+li{list-style-type:none; width:20vw; text-align:center;}
+
+li:hover{background:white; height:50px;}
+
+li>a{text-decoration:none; color:black; position:relative; top:30%;
+
+font-weight:bold; cursor:pointer; user-select:none;}
+
+ul{float:right; display:flex; }
+
 .logo{
 float: left;
 padding:2px;
@@ -53,24 +67,7 @@ width: 250px;
 margin: auto;
 }
 li{
-float: right;
-list-style: none;
-padding: 10px;
-} a{ text-decoration: none; color: black;} 
-.btn {
-  background-color: rgb(255, 204, 0); /* Blue background */
-  border: none; 
-  border-radius: 3px;
-  color:white ; /* White text */
-  padding: 2px 6px; /* Some padding */
-  font-size: 30px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-}
-.icontext{
-padding:3px;
-font-size: 20px;
-text-align: center;
-}
+
 .container{
 margin: 100px 1px;
 display:flex;
@@ -261,14 +258,23 @@ font-size:12px;}
 </style>
 </head>
 <body>
+
 <nav class="navbar" >
+
 <img src="20221224_213732.png"  class="logo">
-<ul clas="menue">
-<li><a href="meterial.html"><button class="btn"><i class="fa fa-book"></i></button></a><br><span class="icontext">Material</span></li>
-<li><a href="notes.html"><button class="btn"><i class="fa fa-file"></i> </button></a><br><span class="icontext">Notes</span></li>
-<li><a href="#"><button class="btn"><i class="fa fa-home"></i></button></a><br><span class="icontext">Home</span></li>
-<li><a href="tutorial.html"><button class="btn"><i class="fa-solid fa-circle-chevron-down"></i></button></a><br><span class="icontext">Tutorials</span></li>
+
+<ul>
+
+<li><a href="#">Home &#10095; </a></li>
+
+<li><a href="tutorial.html">Tutorials &#10095; </a></li>
+
+<li><a href="meterial.html">Material &#10095; </a></li>
+
+<li><a href="notes.html">Notes &#10095; </a></li>
+
 </ul>
+
 </nav>
 
 <header class="container">
