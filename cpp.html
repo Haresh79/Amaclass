@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>C++ Code note</title>
+<style type="text/css">
+div{background:black;
+color:white; overflow:scroll;}
+</style>
+</head>
+<body>
+ <h1>Variable, Datatype, Pointer, Operator & Conditional, etc..</h1>
+ <div>
+  <pre>
+   <code>
+     //general purpose programming language
+     //it was designed by Bjarne Stroustrup
+     //in 1979 at Bell Labs
+     //initial time c++ is called as C with Class.
+     
+     #include &lt;iostream&gt;
+     using namespace std;
+     
+     //Compiler version g++ 6.3.0
+     int a=10;
+     
+     int main()
+     {
+     /******** Variable **********/
+     //it is a simple name which use to store any value in memory space.
+     //name="Haresh";
+     
+     /******** Data Type **********/
+     //it specifies the type of data and size of data you want to
+     // store or used there.
+     /*             .
+               .    .   . 
+             .      .      .
+     Fundamental  Derived  UserDefine
+     int          Array    Class
+     char         String   Structure
+     float        Pointer  Union
+     bool         Reference 
+     double       Function
+     long
+     short  
+     
+     */  
+     /* int a=1288888;
+     char letter='Z';
+     float score=16.8999;
+     double num=145.88888888;
+     long b=188888888888888888;
+     short c=1;
+     cout<&lt;c;
+     */
+     
+     /******** Type Conversion **********/
+     //when we convert a variable of one  data type to 
+     //an other data type that is called This.
+     
+     //internal
+     /*float a=1;
+     char b='Ha';
+     bool c=-1;
+     cout<&lt;a<<" "<&lt;b<<" "<&lt;c;
+     */
+     //External
+     /*
+     float a=1.888;
+     int sum=(int)a+5;
+     cout<&lt;sum;
+     */
+     
+     /******** Pointers && References **********/       
+     // a pointer is a variable which points another.
+     //it mean pointer use to store address of any variable.
+     //Reference refer address.
+     /*  int a=5;
+     int *ptr=&a; 
+     int **ptrr=&ptr;
+     cout<&lt;ptr<<" / "<<&a<<" / "<<*ptr<<"/ "<&lt;ptrr<<"/ "<<**ptrr; */
+     
+     /******** Input and Output **********/       
+     //input and output functions are in STD library &lt;iostream&gt;
+     /*cout<<"hello"<&lt;endl;
+     int a;
+     cin>>a; 
+     cout<&lt;a<&lt;endl;   */
+     
+     /******** Operators **********/  
+     // an operator is a symble which used to perform operation 
+     //between one or two operands. 
+     /*               .
+                .   . . .    .
+          .        .  .   .       .
+       .          .    .      .          .
+     Arithmetic  Assig- Compa- Logical   Other
+     -ment  -rsion
+     +           =     ==      &&       ::
+     -           +=    !=      ||       endl
+     *           -=    >       !        sizeof()
+     /           *=    <                ()?():();
+     %           /=    >=
+     ++          %=    <=
+     --       
+     
+     T&&F=F
+     F&&F=F
+     !T=F
+     */
+     
+     /*{
+     int a=5;
+     cout<< ::a <&lt;endl;
+     cout<&lt;sizeof(a)<&lt;endl;
+     }
+     cout<&lt; a;   
+     */   
+     
+     /******** Conditional **********/  
+     // it use to exicute some code on the
+     //base of codition satisfies or not.
+     /*           .
+                  .
+         .        .        .
+     
+     if-else | else if  | Nested if 
+     
+     if(){}  | if(){}   |  if(){ if(){}
+     else{}  | else if()|        else{} }
+             |  {}      |  else{ if(){}
+             | else{}   |        else{} }
+     */ 
+     /*  int a=8; 
+     if(a>6){
+     cout<<"5>6";
+     }
+     else{
+     cout<<"5&lt;6";
+     }*/
+     /*  int num1,num2;
+     cout<<"Enter a and b number: ";
+     cin>>num1>>num2;
+     
+     if(num1>num2){
+     cout<<"big is: "<&lt;num1;
+     } 
+     else if(num2>num1){
+     cout<<"big is: "<&lt;num2;
+     }
+     else{
+     cout<&num1<<"="<&lt;num2;
+     } */
+     /*int mark;
+     cout<<"Enter your marks: ";
+     cin &gt;&gt; mark;
+     if(30<=mark){
+     if(60<=mark){
+     cout<<"1st";
+     }
+     else{
+     cout<<"pass";
+     }
+     }
+     else{
+     cout<<"Fail";
+     }
+     */
+     
+     
+     
+     // cout<<"Haresh";  
+     return 0;
+     }
+   </code>
+  </pre>
+ </div>
+ <h1>Loop, Function, Array, Recursion & String..</h1>
+ <div>
+  <pre>
+   <code>
+     #include &lt;iostream&gt;
+     using namespace std;
+     
+     //Compiler version g++ 6.3.0
+     void pow(int a, int b){
+     int res=1;
+     for(int i=1; i<=b; i++){
+     res=res*a;
+     }
+     cout<&lt;res;
+     }
+     
+     //find the factorial of any number let number 4
+     /* 4*3*2*1
+     ==> 4*factorial of 3 */
+     int fact(int f){
+     if(f==1||f==0){
+     return 1;
+     }
+     return f*fact(f-1);
+     }
+     
+     int main()
+     {
+     // loop -> a block of code which repete again again 
+     /*for(int i=0; i&lt;5; i=i+1){
+     cout<&lt;i<&lt;endl;
+     }*/
+     
+     /* int i=0;
+     while(i&lt;5){
+     cout<<"Haresh"<&lt;endl;
+     i++;
+     }*/
+     /* int i=1;
+     do{
+     cout<&lt;i<<" ";
+     i+=1;
+     }while(i&lt;5);
+     */
+     
+     //GAME
+     //
+     /*int org=4;
+     int key;
+     int count=0;
+     cout<<"Enter any number between 1 to 10";
+     while(cin>>key){
+     count++;
+     if(key==org){
+     cout<<"Congratulations."<&lt;endl;
+     cout<&lt;count;
+     }
+     } */
+     
+     //Function
+     //pow(6,2);
+     
+     //Recursion
+     //if any func call it self in side it body.
+     //cout<&lt;fact(5);
+     
+     //Array
+     /*int n=5;
+     int *arr= new int(5);
+     arr[0]=2;
+     arr[1]=3;
+     arr[2]=5;
+     //cout<&lt;length;
+     for(int i=0; i&lt;5; i++){
+     cout<&lt;arr[i];
+     }*/
+     
+     //String Data type 
+     /*string UN;
+     cout<<"Enter userid"<&lt;endl;
+     cin>>UN;
+     cout<<"Your user Id: "<&lt;UN;*/
+     /*   string str;
+     getline(cin, str);
+     cout<&lt;str.empty();
+     cout<&lt;str.size();
+     cout<&lt;str;*/
+     /*string str1="Haresh";
+     string str2="zee";
+     str1= str1+str2;
+     cout<&lt;str1;*/
+     
+     }
+   </code>
+  </pre>
+ </div>
+ <h1>Class, Object, Constructor & Destructor..</h1>
+ <div>
+ <pre>
+  <code>
+   #include &lt;iostream>
+   using namespace std;
+   
+   //Compiler version g++ 6.3.0
+   class val{
+   public:
+   int a,b;
+   val(){ //default constructor 
+   a=15;
+   b=18;
+   }
+   val(int a, int b){ //parameterised constructor 
+   this->a=a;
+   this->b=b;
+   }
+   val(val &r){//copy constructor 
+   a=r.a;
+   b=r.b;
+   }
+   ~val(){
+   cout<<"destructor called"<&lt;endl;
+   }
+   }
+   int main()
+   {
+   val v1,*v2=new val();
+   v1.a=5;
+   v1.b=8;
+   cout<&lt;v1.a<<" & "<&lt;v1.b<&lt;endl;
+   //cout<&lt;v2->a<<" & "<&lt;v2->b<&lt;endl; 
+   //delete v2;
+   val v3(35,38);
+   cout<&lt;v3.a<<" & "<&lt;v3.b<&lt;endl;
+   val *v4=new val(25,28);
+   cout<&lt;v4->a<<" & "<&lt;v4->b<&lt;endl;
+   val v5=v3;
+   cout<&lt;v5.a<<" & "<&lt;v5.b<&lt;endl;
+   }
+  </code>
+ </pre>
+ </div>
+ <h1>Encapsulation</h1>
+ <div>
+ <pre>
+  <code>
+   #include &lt;iostream>
+   using namespace std;
+   
+   //Compiler version g++ 6.3.0
+   class pas{
+   int pw;
+   public:
+   void set(int n){
+   pw=n;
+   }
+   void get(){
+   cout<<"Password 🔑 is "<&lt;pw<&lt;endl;
+   }
+   };
+   int main()
+   {
+   pas p1, p2;
+   p1.set(738187);
+   p1.get();
+   p2.set(787314);
+   p2.get();
+   }
+  </code>
+ </pre>
+ </div>
+ <h1>Friend Class & Function..</h1>
+ <div>
+  <pre>
+   <code>
+    #include &lt;iostream>
+    using namespace std;
+    
+    //Compiler version g++ 6.3.0
+    class A{
+    int x;
+    public:
+    A(int x){
+    this->x=x;
+    }
+    //void lala();
+    friend void print(A &obj);
+    };
+    void print(A &obj){
+    cout<&lt;obj.x<&lt;endl;
+    }
+    /*void A::lala(){
+    cout<&lt;x;
+    }*/
+    int main()
+    {
+    A o(10);
+    print(o);
+    //o.lala();
+    
+    }
+     // next
+     
+    class A{
+    private:
+    int pvt;
+    protected:
+    int ptc;
+    public:
+    friend class F;
+    };
+    
+    class F{
+    public:
+    void put(A &obj){
+    cout<<"Enter two values.";
+    cin>>obj.pvt;
+    cin>>obj.ptc;
+    }
+    void get(A &obj){
+    cout<<"private value: "<&lt;obj.pvt<&lt;endl;
+    cout<<"protected value: "<&lt;obj.ptc;
+    }
+    };
+    
+    int main()
+    {
+    A o;
+    F o2;
+    o2.put(o);
+    o2.get(o);
+    
+    }
+   </code>
+  </pre>
+ </div>
+ <h1>Inheritance..</h1>
+ <div>
+  <pre>
+   <code>
+    #include &lt;iostream>
+    using namespace std;
+    
+    //Compiler version g++ 6.3.0
+    
+    /*********** Single Inheritance 😉 ***********/
+    class perent{
+    public:
+    perent(){
+    cout<<"Now in perent class."<&lt;endl;
+    }
+    };
+    class child: public perent{
+    public:
+    child(){
+    cout<<"Now in child class"<&lt;endl;
+    }
+    }; 
+    
+    /*********** Multiple Inheritance 😉 ***********/
+    class perent1{
+    public:
+    perent1(){
+    cout<<"Class Perent1."<&lt;endl;
+    }
+    };
+    class perent2{
+    public:
+    perent2(){
+    cout<<"Class Perent2."<&lt;endl;
+    }
+    };
+    class children: public perent1, public perent2{
+    public:
+    children(){
+    cout<<"Class Children."<&lt;endl;
+    }
+    };
+    
+    
+    /*********** Multilevel Inheritance 😉 ***********/
+    class grandfather{
+    public :
+    grandfather(){
+    cout << "Grandpa class."<&lt;endl;
+    }
+    };
+    class father:public grandfather {
+    public:
+    father(){
+    cout<< "Father class."<&lt;endl;
+    }
+    };
+    class son:public father{
+    public:
+    son(){
+    cout<<"Son class."<&lt;endl;
+    }
+    };
+    
+    /*********** Hierarchical Inheritance 😉 ***********/
+    class mother{
+    public:
+    mother(){
+    cout<<"mother class."<&lt;endl;
+    }
+    };
+    class son1:public mother{
+    public:
+    son1(){
+    cout<<"Son 1 class."<&lt;endl;
+    }
+    };
+    class son2:public mother{
+    public:
+    son2(){
+    cout<<"Son 2 class."<&lt;endl;
+    }
+    };
+    
+    
+    /*********** Hybrid Inheritance 😉 ***********/
+    class grandpa{
+    public:
+    grandpa(){
+    cout<<"grandpa class"<&lt;endl;
+    }
+    };
+    class bigpapa: public grandpa{
+    public:
+    bigpapa(){
+    cout<<"bigpapa class "<&lt;endl;
+    }
+    };
+    class papa:public grandpa{
+    public:
+    papa(){
+    cout<<"papa class "<&lt;endl;
+    }
+    };
+    class putra:public papa{
+    public:
+    putra(){
+    cout<<"putra class "<&lt;endl;
+    }
+    };
+    
+    int main()
+    {
+    
+    child o1;
+    
+    children o2;
+    
+    son o3;
+    
+    son1 o4;
+    son2 o5;
+    
+    putra o6;
+    }
+   </code>
+  </pre>
+ </div>
+ <h1>Polymerphism..</h1>
+ <div>
+  <pre>
+   <code>
+    #include&lt;iostream&gt;
+    using namespace std;
+    
+    //Operator Overloading
+    /*class a{
+    public:
+    int x;
+    a(int x){
+    this->x=x;
+    }
+    void operator++(){
+    x=x-1;
+    } 
+    };
+    
+    int main()
+    {
+    int x=8;
+    a obj(x);
+    cout <&lt;obj.x<&lt;endl;
+    ++obj;
+    cout <&lt;obj.x<&lt;endl;
+    ++obj;
+    cout <&lt;obj.x<&lt;endl;
+    }*/
+    class a{
+    public:
+    int x;
+    int operator/(a &obj){
+    return (this->x)-(obj.x);
+    }
+    };
+    int main(){
+    a o;
+    o.x=10;
+    a o1;
+    o1.x=5;
+    int r= o/o1;
+    cout<&lt;r;
+    }
+    
+    // Function Overloading
+    void add(int a, int b)
+    {
+    cout << "sum = " << (a + b);
+    }
+    
+    void add(int a, int b, int c)
+    {
+    cout <&lt; endl << "sum = " << (a + b + c);
+    }
+    
+    // Driver code
+    int main()
+    {
+    add(10, 2);
+    add(5, 6, 4);
+    
+    return 0;
+    }
+    
+   </code>
+  </pre>
+ </div>
+ 
+</body>
+</html>
